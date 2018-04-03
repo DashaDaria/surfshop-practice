@@ -3,14 +3,16 @@ import React, {Component} from 'react';
 const Surfboards = ({surfboards}) => (
   <div>
     <h1> Surfboards: </h1>
-    <div>
+
     {surfboards.map(surfboard =>
-      <h3>{surfboard.name}</p>
-      <p>{surfboard.price}</p>
-      <p>{surfboard.img_url}</p>
-      <p>{surfboard.length}</p>
+      <div>
+        <h3>{surfboard.name}</h3>
+        <p>Price: ${surfboard.price}</p>
+        <img src={surfboard.img_url} alt={surfboard.name}/>
+        <p>Length: {surfboard.length} inches</p>
+      </div>
     )}
-    </div>
+
   </div>
 )
 
