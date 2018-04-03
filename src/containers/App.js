@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css'
 import Surfboards from './Surfboards';
 
+const API_URL = process.env.REACT_APP_API_URL;
 
 class App extends Component {
   constructor(props){
@@ -13,13 +14,12 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3001/api/surfboards')
+    fetch(`${API_URL}/surfboards`)
     .then(response => response.json())
     .then(surfboards => this.setState({surfboards}))
   }
 
   render(){
-    console.log(this.state)
     return (
       <div className="App">
         <Surfboards surfboards={this.state.surfboards}/>
