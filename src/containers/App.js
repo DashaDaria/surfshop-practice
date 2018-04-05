@@ -5,13 +5,6 @@ import Surfboards from './Surfboards';
 const API_URL = process.env.REACT_APP_API_URL;
 
 class App extends Component {
-  constructor(props){
-    super(props)
-
-    this.state = {
-      surfboards: []
-    }
-  }
 
   componentDidMount(){
     fetch(`${API_URL}/surfboards`)

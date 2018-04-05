@@ -1,10 +1,12 @@
 import {
   createStore,
   applyMiddleware,
-  combineREducers
+  combineReducers
 } from 'redux';
+import thunk from 'redux-thunk';
 
-import thunk from 'redux-think';
+import surfboards from './reducers/surfboards';
+import surfboardFormData from './reducers/surfboardFormData';
 
 const reducers = combineReducers({
   surfboards,
