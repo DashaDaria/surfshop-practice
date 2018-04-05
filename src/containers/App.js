@@ -1,23 +1,15 @@
-import React, {Component} from 'react';
-import './App.css'
-import Surfboards from './Surfboards';
+import React, { Component } from 'react';
 
-const API_URL = process.env.REACT_APP_API_URL;
+import Surfboards from './Surfboards';
+import './App.css';
 
 class App extends Component {
-
-  componentDidMount(){
-    fetch(`${API_URL}/surfboards`)
-    .then(response => response.json())
-    .then(surfboards => this.setState({surfboards}))
-  }
-
-  render(){
+  render() {
     return (
       <div className="App">
-        <Surfboards surfboards={this.state.surfboards}/>
+        <Surfboards />
       </div>
-    )
+    );
   }
 }
 
