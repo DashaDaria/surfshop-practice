@@ -5,7 +5,7 @@ class SurfboardForm extends Component {
   render(){
     return(
       <div>
-      Add a new surfboard:
+      <p>Add a new surfboard:</p>
         <form>
         </form>
       </div>
